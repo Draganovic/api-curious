@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
   def create
-    render text: request.env["omniauth.auth"].inspect
+    @user = User.get_user(request.env['omniauth.auth'])
+    session[:user_id] = @user.id
+    redirect_to root_path
   end
 end
