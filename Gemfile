@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
 gem 'figaro'
+gem 'rspec-rails'
 
 group :development, :test do
   gem 'byebug'
