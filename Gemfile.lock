@@ -179,6 +179,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  faraday
   figaro
   jbuilder (~> 2.0)
   jquery-rails
