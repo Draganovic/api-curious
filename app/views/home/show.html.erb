@@ -1,5 +1,12 @@
 <% if current_user  %>
   <h1>
-    <%=  current_user.nickname%>
+    <ul style="list-style: none;">
+      <li><%= image_tag(current_user.image, width: "250", height: "250") %></li>
+      <li><%=  current_user.name%></li>
+      <li><%=  current_user.nickname%></li>
+      <li><%=  current_user.email%></li>
+      <li>Followers:<%=  current_user.followers%></li>
+      <li>Following:<%=  current_user.following%></li>
+    </ul>
   </h1>
 <% end %>

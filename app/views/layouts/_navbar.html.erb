@@ -10,9 +10,11 @@
   </div>
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li>
+      <% if current_user %>
+      <%= link_to "Logout", logout_path, method: :delete %>
+        <% else %>
         <%= link_to "Sign in with Github", github_login_path %>
-      </li>
+      <% end %>
     </ul>
   </div>
 </nav>
