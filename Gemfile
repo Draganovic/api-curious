@@ -9,6 +9,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
 gem 'figaro'
 gem 'rspec-rails'
+gem 'faraday'
 
 group :development, :test do
   gem 'byebug'

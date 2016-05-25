@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
 
+  def self.repos
+    GithubService.new(self)
+  end
+
   def self.get_user(auth)
     User.where(provider: auth[:provider], uid: auth[:uid]).first_or_create do |user|
       user.nickname = auth[:info][:nickname]
@@ -12,4 +16,5 @@ class User < ActiveRecord::Base
       user.save!
     end
   end
+
 end
