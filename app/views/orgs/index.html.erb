@@ -1,8 +1,6 @@
-<ul style="list-style: none;">
+<ol class="orgs">
 <h2>Organizations</h2>
 <% @orgs.each do |org| %>
-<li>
-<%= org[:login]%>
-</li>
+<li><%= org[:login]%></li>
 <% end %>
-</ul>
+</ol>
