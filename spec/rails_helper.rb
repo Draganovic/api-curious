@@ -6,6 +6,10 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rails'
+
+def current_user
+User.create(nickname: "draganovic", email: "admir.draganovic@gmail.com", image: "https://avatars.githubusercontent.com/u/8728792?v=3", token:"4f92a27b3bcd683b9845a2aefda3ab736418e671", uid: "8728792", provider: "github", name: "Admir Draganovic", following: 6, followers: 13)
+end
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
