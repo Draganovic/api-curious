@@ -1,0 +1,10 @@
+<ul style="list-style: none;">
+<h2>Following Events</h2>
+<% @events.each do |event| %>
+<li>
+<%= event[:name]%>
+<%= event[:action] %>
+<%= event[:project] %>
+</li>
+<% end %>
+</ul>
