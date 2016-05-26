@@ -8,12 +8,16 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
 gem 'figaro'
-gem 'rspec-rails'
 gem 'faraday'
 
 group :development, :test do
   gem 'byebug'
   gem 'pry-rails'
+  gem 'capybara'
+  gem 'rspec-rails'
+  gem 'vcr'
+  gem 'launchy'
+  gem 'webmock'
 end
 
 group :development do
