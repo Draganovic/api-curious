@@ -12,8 +12,4 @@ class Repo
     end
   end
 
-  # def save
-  #   Repo.service.create_repo(self.to_h)
-  # end
-
 end
