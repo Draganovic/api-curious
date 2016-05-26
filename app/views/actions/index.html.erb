@@ -1,8 +1,7 @@
 <ul style="list-style: none;">
 <h2>My Actions</h2>
 <% @actions.each do |action| %>
-<li>
-<%= action[:type]%>
-</li>
+<li> Event type: <%= action[:type]%> </li>
+<li>Repo name: <%= action[:repo] %></li><br>
 <% end %>
 </ul>

@@ -8,7 +8,7 @@ class Action
   def all
     temp_actions_hash = service.actions_hash
     temp_actions_hash.map do |individual_hash|
-      { type: individual_hash["type"]}
+      { type: individual_hash["type"], repo: individual_hash["repo"]["name"]}
     end
   end
 end
