@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # post   "/login",                 to: "sessions#create"
   delete "/logout",                to: "sessions#destroy"
 
+    get "/repos",                  to: "repos#index"
     get '/auth/github', as: :github_login
   # get "/auth/:provider/callback", as: :github_login
     get '/auth/github/callback', to: "sessions#create"
