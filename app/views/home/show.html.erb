@@ -9,8 +9,12 @@
       <li>Following:<%=  current_user.following%></li>
     </ul>
   </h1>
-  <%= link_to "Repositories", repos_path %>
-  <%= link_to "Organizations", orgs_path %>
-  <%= link_to "Events", events_path %>
-  <%= link_to "Actions", actions_path %>
+  <ul class="showlinks", style="list-style: none;">
+    <li><%= link_to "Repositories", repos_path %></li>
+    <li><%= link_to "Friends Events", events_path %></li>
+    <li><%= link_to "Organizations", orgs_path %></li>
+    <li><%= link_to "My Actions", actions_path %></li>
+  </ul>
+  <% else %>
+<h1>Welcome to Github Apicurious</h1>
 <% end %>
