@@ -1,0 +1,9 @@
+
+<ul style="list-style: none;">
+<h2>Repositories</h2>
+<% @repos.each do |repo| %>
+<li>
+<%= link_to repo[:name], repo[:html_url]%>
+</li>
+<% end %>
+</ul>
