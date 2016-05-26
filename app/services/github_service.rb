@@ -26,6 +26,14 @@ attr_reader :current_user, :connection
     parse(get_events)
   end
 
+  def get_actions
+    @connection.get "users/#{current_user.nickname}/events"
+  end
+
+  def actions_hash
+    parse(get_actions)
+  end
+
   def orgs_hash
     parse(get_orgs)
   end
