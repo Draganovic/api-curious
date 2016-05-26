@@ -14,13 +14,13 @@ attr_reader :current_user, :connection
     parse(get_repos)
   end
 
-  # def get_orgs
-  #   @connection.get "users/#{current_user.nickname}/orgs"
-  # end
-  #
-  # def orgs_hash
-  #   parse(get_orgs)
-  # end
+  def get_orgs
+    @connection.get "users/#{current_user.nickname}/orgs"
+  end
+
+  def orgs_hash
+    parse(get_orgs)
+  end
 
   def parse(response)
     JSON.parse(response.body, sybolize_names: true)
