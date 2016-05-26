@@ -35,4 +35,17 @@ RSpec.feature "user logs in with github" do
     expect(page).to have_content "El Tank"
     expect(page).to have_link "Logout"
   end
+
+    scenario "user will logout from navbar" do
+      stub_omniauth
+      visit "/"
+      click_on "Sign in with Github"
+      expect(page.status_code).to eq(200)
+      expect(page).to have_content "El Tank"
+      expect(page).to have_link "Logout"
+      click_on "Logout"
+      expect(page).to have_content "Welcome to Github Apicurious"
+      expect(page).to have_content "Sign in with Github"
+      expect(page).to_not have_content "El Tank"
+    end
 end
